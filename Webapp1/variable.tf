@@ -24,3 +24,9 @@ resource "aws_instance" "instance1" {
 	tags = var.tags_list
 	availability_zone = var.availability_zone[0]
 }
+resource "aws_instance" "instance2" {
+	instance_type = "t3.micro"
+	ami = var.image_id
+	tags = var.tags_list
+	availability_zone = var.availability_zone[1]
+}
